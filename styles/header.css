@@ -1,17 +1,9 @@
-﻿body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans';
-    font-size: 18px;
-    background-color: #444;
-}
-
-/* Banners */
+﻿/* Banners */
 .banner {
     background-color: #1f1e1d;
     background-image: url('../img/senko_background.png');
     background-position-x: center;
-    background-position-y: 80%;
+    background-position-y: 85%;
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -20,8 +12,8 @@
 }
 
 .banner-inner {
-    margin: 0px auto 0px auto;
-    padding: 10px 0px 0px 0px;
+    margin: auto;
+    padding: 50px 0px 0px 0px;
     max-width: 90%;
     position: relative;
     text-align: center;
@@ -32,7 +24,7 @@
 .site-title {
     color: #fff;
     cursor: pointer;
-    font-size: 64px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     text-align: center;
@@ -45,7 +37,7 @@
 
 .site-tagline {
     color: #AAA;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     text-align: center;
@@ -61,19 +53,19 @@
 .social-nav {
     list-style: none;
     position: relative;
-    margin: 0;
+    padding: 0px;
     text-align: center;
+    margin: 0px;
 }
 
     .social-nav .item {
-        margin: 0;
         padding: 0;
         list-style: none;
         display: inline-block;
     }
 
         .social-nav .item + .item {
-            padding-left: 10px;
+            padding-left: 30px;
         }
 
         .social-nav .item .icon-button {
@@ -91,23 +83,26 @@
 .site-nav {
     list-style: none;
     position: relative;
-    margin: 0;
-    padding-top: 50px;
+    padding: 0px;
     text-align: center;
     display: block;
+    margin: 50px 0px 0px 0px;
 }
 
     .site-nav .item {
         display: inline-block;
         background: #fff;
-        border-radius: 50px 50px 0px 0px;
-        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        padding: 5px 20px 0px 20px;
         transition-duration: 0.4s;
         transition-timing-function: ease-in-out;
     }
         .site-nav .item:hover {
             background: #0f0;
         }
+        /*.site-nav .item + .item {
+            padding-left: 30px;
+        }*/
         .site-nav .item .site-page {
 
             color: #888;

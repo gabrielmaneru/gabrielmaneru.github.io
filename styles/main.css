@@ -1,2 +1,65 @@
 ﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+    font-size: 24px;
+    background-color: #222;
+    background-image: url('../img/stars_background.png');
+    background-repeat:repeat;
 }
+.main-article {
+    align-self: center;
+    background: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    width: auto;
+    max-width: 1200px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    margin: 0px auto;
+    padding: 100px;
+}
+.main-title {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    padding: 7.5% 6%;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+    .main-title > h1 {
+        font-size: 48px;
+        color: #457;
+        margin: 50px 0px;
+    }
+.separator {
+    border: 5px dashed #444;
+    margin : 30px;
+}
+.main-par {
+    text-indent: 100px;
+    text-align: justify;
+    line-height: 160%;
+    margin-bottom: 0px 0px 0px 1em;
+    word-wrap: break-word;
+    font-size: 24px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #000;
+}
+.main-link{
+    text-decoration: underline;
+    text-decoration-color: #020;
+    color: #020;
+}
+    .main-link:hover {
+        text-decoration-color: #080;
+        color: #080;
+    }
+    .main-link:active {
+        text-decoration-color: #0f0;
+        color: #0f0;
+    }
