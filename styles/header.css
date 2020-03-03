@@ -1,0 +1,123 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+    font-size: 18px;
+    background-color: #444;
+}
+
+/* Banners */
+.banner {
+    background-color: #1f1e1d;
+    background-image: url('../img/senko_background.png');
+    background-position-x: center;
+    background-position-y: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+
+.banner-inner {
+    margin: 0px auto 0px auto;
+    padding: 10px 0px 0px 0px;
+    max-width: 90%;
+    position: relative;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header Text */
+.site-title {
+    color: #fff;
+    cursor: pointer;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration-color: #ffffff;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-shadow: #000 1px 0 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-tagline {
+    color: #AAA;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-decoration-color: #ffffff;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-shadow: #000 1px 0 10px;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+}
+
+/* Social Navigation*/
+.social-nav {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    text-align: center;
+}
+
+    .social-nav .item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+    }
+
+        .social-nav .item + .item {
+            padding-left: 10px;
+        }
+
+        .social-nav .item .icon-button {
+            font-size: 48px;
+            color: #fff;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out;
+        }
+
+            .social-nav .item .icon-button:hover {
+                color: #0f0
+            }
+
+/* Site Navigation */
+.site-nav {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding-top: 50px;
+    text-align: center;
+    display: block;
+}
+
+    .site-nav .item {
+        display: inline-block;
+        background: #fff;
+        border-radius: 50px 50px 0px 0px;
+        padding: 20px;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in-out;
+    }
+        .site-nav .item:hover {
+            background: #0f0;
+        }
+        .site-nav .item .site-page {
+
+            color: #888;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            text-align: center;
+            text-decoration-color: #ffffff;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            -webkit-font-smoothing: antialiased;
+            margin: 0px;
+        }
