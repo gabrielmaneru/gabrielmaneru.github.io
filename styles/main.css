@@ -4,7 +4,7 @@
     font-family: 'Noto Sans';
     font-size: 24px;
     background-color: #222;
-    background-image: url('../img/stars_background.png');
+    background-image: url('../data/stars_background.png');
     background-repeat:repeat;
 }
 
@@ -39,10 +39,7 @@
         color: #457;
         margin: 50px 0px;
     }
-.separator {
-    border: 5px dashed #444;
-    margin : 30px;
-}
+
 .main-par {
     text-indent: 100px;
     text-align: justify;
@@ -78,9 +75,11 @@
 }
     .post-thumbs > li {
         background: #000;
-        position: center;
+        background-size:auto 100%;
+        background-position:center;
         width: 300px;
         height: 300px;
+        background-repeat: no-repeat;
         display: block;
         float: left;
         overflow: hidden;
@@ -126,3 +125,17 @@
                     text-decoration-color: #0f0;
                     color: #0f0;
                 }
+.main-media {
+    background: #000;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position: center;
+    width: 750px;
+    height: 750px;
+    display: inline-block;
+    overflow: hidden;
+}
+.separator{
+    margin: 50px 50px 
+}
