@@ -131,8 +131,8 @@
     background-repeat:no-repeat;
     background-position:center;
     position: center;
-    width: 750px;
-    height: 750px;
+    width: 500px;
+    height: 500px;
     display: inline-block;
     overflow: hidden;
 }
