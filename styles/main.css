@@ -7,13 +7,15 @@
     background-image: url('../img/stars_background.png');
     background-repeat:repeat;
 }
+
+/* Main Styles */
 .main-article {
     align-self: center;
     background: #fff;
     border-radius: 50px;
     overflow: hidden;
     width: auto;
-    max-width: 1200px;
+    max-width: 1300px;
     text-align: center;
     box-sizing: border-box;
     display: block;
@@ -29,6 +31,8 @@
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 0px;
+    text-shadow: #000 5px 5px 50px;
+    -webkit-font-smoothing: antialiased;
 }
     .main-title > h1 {
         font-size: 48px;
@@ -63,3 +67,62 @@
         text-decoration-color: #0f0;
         color: #0f0;
     }
+
+
+
+/* Post Styles */
+.post-thumbs {
+    width:100%;
+    height:auto;
+    float:left;
+}
+    .post-thumbs > li {
+        background: #000;
+        position: center;
+        width: 300px;
+        height: 300px;
+        display: block;
+        float: left;
+        overflow: hidden;
+        margin: 20px;
+        -webkit-perspective: 500px;
+        box-sizing: border-box;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+    }
+        .post-thumbs > li > div {
+            position: absolute;
+            background:#fff;
+            opacity:0.5;
+            width: 300px;
+            height: 0px;
+            font-size: 0px;
+            top: 300px;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-out;
+        }
+        .post-thumbs > li:hover > div {
+            position: absolute;
+            width: 300px;
+            height: 70px;
+            top: 230px;
+            font-size: 24px;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-out;
+        }
+            .post-thumbs > li:hover > div > a {
+                text-shadow: #000 5px 5px 50px;
+                text-decoration-color: #000;
+                color: #000;
+            }
+                .post-thumbs > li:hover > div > a:hover {
+                    text-shadow: #080 5px 5px 50px;
+                    text-decoration-color: #080;
+                    color: #080;
+                }
+
+                .post-thumbs > li:hover > div > a:active {
+                    text-shadow: #0f0 5px 5px 50px;
+                    text-decoration-color: #0f0;
+                    color: #0f0;
+                }

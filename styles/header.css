@@ -71,6 +71,8 @@
         .social-nav .item .icon-button {
             font-size: 48px;
             color: #fff;
+            text-shadow: #000 1px 0 10px;
+            -webkit-font-smoothing: antialiased;
             transition-duration: 0.4s;
             transition-timing-function: ease-in-out;
         }
@@ -94,6 +96,7 @@
         background: #fff;
         border-radius: 20px 20px 0px 0px;
         padding: 5px 20px 0px 20px;
+        -webkit-font-smoothing: antialiased;
         transition-duration: 0.4s;
         transition-timing-function: ease-in-out;
     }
