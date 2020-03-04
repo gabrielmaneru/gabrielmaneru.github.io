@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gabriel Ma&ntilde;eru - Portfolio</title>
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header start-->
+    <header class="banner">
+        <div class="banner-inner">
+            <!--Add Site Title-->
+            <a class="site-title" href="">
+                Gabriel Ma&ntilde;eru
+            </a>
+
+            <!--Add Site Tagline-->
+            <h2 class="site-tagline">
+                Video game programmer with special interest in Tools & Physics
+            </h2>
+
+            <!--Add Social Navigation-->
+            <ul class="social-nav">
+                <li class="item">
+                    <a class="icon-button" href="https://www.linkedin.com/in/gabriel-maneru-olazabal/" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="icon-button" href="https://github.com/gabrielmaneru/" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!--Add Site Navigation-->
+            <ul class="site-nav">
+                <li class="item">
+                    <a class="site-page" href="../index.html">HOME</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/games.html">GAMES</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/projects.html">PROJECTS</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/about.html">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Insert Horizontal Separation-->
+        <div style="background:#000; width:100%; height:20px;"></div>
+    </header>
+
+    <article class="main-article">
+        <header class="main-title">
+            <h1>Physics System</h1>
+        </header>
+        <hr class="separator">
+
+        <div class="main-media" style="background-image:url(../data/physics-system_thumb.gif)"></div>
+        <p class="main-par">
+            <b>Instructor:</b> Eder Beldad
+        </p>
+        <p class="main-par">
+            <b>Languages:</b> C++, CMAKE
+        </p>
+        <p class="main-par">
+            <b>Tools:</b> OpenGL, GLFW, GLM, GoogleTest
+        </p>
+        <p class="main-par">
+            <b>Development:</b> <a class="main-link" href="https://github.com/gabrielmaneru/Physics-System-Simulation" target="_blank">GitHub Repository</a>
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <b>Currently Under Development:</b>
+        <p class="main-par"></p>
+
+        <p class="main-par">
+            <b>Overview:</b>
+        </p>
+        <p class="main-par">
+            The goal of this course is to implement a fully funcional collision-detection and collision-resolution physics system. In addition extra features can be implemented such as detructible objects, stacking, soft bodies or friction.
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <b>Implementation details:</b>
+        <p class="main-par"></p>
+
+        <p class="main-par">
+            <b><i>Half-Edge</i> Mesh:</b>
+        </p>
+        <p class="main-par">
+            There are many popular data structures used to store polygonal meshes. The one I use in this project is called <i>half-edge data structure</i>. Instead of storing their connectivity in the faces refering the neighbor vertices, this structure is <i>edge-based</i> and so will store the connectivity information on the edges. Each edge will referece the vertex its facing, the face it belongs, the next edge and the twin edge being the opposite edge. Having this construction allows to circulate around the face accessing directly neighboring faces. This allows for example to easily retrieve the support vertex along a given direction just by <i>hill-climbing</i> throught the cycles of edges.
+        </p>
+
+        <p class="main-par">
+            <b>Gilbert-Johnson-Keerthi distance algorithm:</b>
+        </p>
+        <p class="main-par">
+            The GJK algorithm is a method for determining the distance between two shapes. Its peculiarity is that instead of needing the full comprehension of how the geometry is stored, it only relies on a support function (returning the point on the shape which has largest elongation in a given direction). The objective if to iteratively generate the closer simplex to the origin of the <i>Minkowski difference</i>.
+        </p>
+        <p class="main-par">
+            Showcase:
+            (Black: Minkowski difference | White: Simplex Closer to the origin)
+        </p>
+        <div class="main-media" style="background-image:url(../data/physics-system_1.gif)"></div>
+        <p class="main-par">
+            If we couldn't find a simplex in the Minkowski difference that englobes the origin, then there is no intersection, job done. However if algorithm manages to find a simplex that do so, then we should retrieve the contact information in order to resolve the collision. We need to find the faces of the shapes that creates the closer face to the origin, inside the Minkowski space.
+        </p>
+        <p class="main-par">
+            <b>Expanded Polytope algorithms:</b>
+        </p>
+        <p class="main-par">
+            The EPA algorithm uses the simplex from the GJK algorithm and expands it into a polytope in the direction of the normal of the face closer to the origin. We continue the interative expansion until we find no further vertices along that expansion direction. We consider that last face to be the contact face. We can then extract the contact information from that face.
+        </p>
+        <p class="main-par">
+            Showcase:
+            (Blue: GJK Simplex | Green: EPA Polytope | Red: Contact Face)
+        </p>
+        <div class="main-media" style="background-image:url(../data/physics-system_2.gif)"></div>
+        <p class="main-par">
+            From the output of EPA we could retrieve the faces of contact, as well as the barycentric coordinates in order to compute the two intersection points, the normal and the penetration.
+        </p>
+        <p class="main-par">
+            Showcase:
+            (Red/Green: Vertex of the faces of contact | Black: Intersection points | Yellow: Intersection normal and penetration)
+        </p>
+        <div class="main-media" style="background-image:url(../data/physics-system_3.gif)"></div>
+
+
+    </article>
+
+    <footer class="footer-back">
+        <h1>Work in progress | Made in HTML/CSS by Gabriel Mañeru | Hosted at github.io</h1>
+    </footer>
+</body>
+</html>

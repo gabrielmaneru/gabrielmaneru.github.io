@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gabriel Ma&ntilde;eru - Portfolio</title>
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header start-->
+    <header class="banner">
+        <div class="banner-inner">
+            <!--Add Site Title-->
+            <a class="site-title" href="">
+                Gabriel Ma&ntilde;eru
+            </a>
+
+            <!--Add Site Tagline-->
+            <h2 class="site-tagline">
+                Video game programmer with special interest in Tools & Physics
+            </h2>
+
+            <!--Add Social Navigation-->
+            <ul class="social-nav">
+                <li class="item">
+                    <a class="icon-button" href="https://www.linkedin.com/in/gabriel-maneru-olazabal/" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="icon-button" href="https://github.com/gabrielmaneru/" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!--Add Site Navigation-->
+            <ul class="site-nav">
+                <li class="item">
+                    <a class="site-page" href="../index.html">HOME</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/games.html">GAMES</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/projects.html">PROJECTS</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/about.html">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Insert Horizontal Separation-->
+        <div style="background:#000; width:100%; height:20px;"></div>
+    </header>
+
+    <article class="main-article">
+        <header class="main-title">
+            <h1>Real-Time Water Rendering</h1>
+        </header>
+        <hr class="separator">
+
+        <div class="main-media" style="background-image:url(../data/real-time-water-rendering_thumb.gif)"></div>
+        <p class="main-par">
+            <b>Instructor:</b> Jon Sánchez
+        </p>
+        <p class="main-par">
+            <b>Languages:</b> C++
+        </p>
+        <p class="main-par">
+            <b>Tools:</b> OpenGL, GLFW
+        </p>
+        <p class="main-par">
+            <b>Research:</b> <a class="main-link" href="../data/real-time-water-rendering_paper.pdf" target="_blank">Real-Time Water Rendering - Paper</a>
+        </p>
+        <p class="main-par">
+            <b>Release:</b> <a class="main-link" href="https://github.com/gabrielmaneru/Real-Time-Water-Rendering/releases/tag/1.1" target="_blank">GitHub</a>
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <b>Overview:</b>
+        </p>
+        <p class="main-par">
+            As a final project for the real-time rendering course, I decided to research about the techinques for rendering water dynamics. I decided then to implement a water tool that come in handy in most situations without assuming the size of the medium we want to render. Allowing to render realistic ambiences to oceans, rapids, lakes or fountains.
+        </p>
+        <p class="main-par">
+            My implementation combines the performance of the global motion and the flexibility of the localise flow to be able to simulate highly interactive water. However, I also discover that hardware and algorithms are recently evolving into particle simulations which will add the next step into water realism whenever its performance will be manageable in real-time gaming.
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <b>Showcase:</b>
+        </p>
+
+        <div class="main-media" style="background-image:url(../data/real-time-water-rendering_1.gif)"></div>
+        <div class="main-media" style="background-image:url(../data/real-time-water-rendering_2.gif)"></div>
+        <div class="main-media" style="background-image:url(../data/real-time-water-rendering_3.gif)"></div>
+
+    </article>
+
+    <footer class="footer-back">
+        <h1>Work in progress | Made in HTML/CSS by Gabriel Mañeru | Hosted at github.io</h1>
+    </footer>
+</body>
+</html>
