@@ -128,8 +128,8 @@
 .main-media {
     background: #000;
     background-size: 100% 100%;
-    background-repeat:no-repeat;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position: center;
     position: center;
     width: 500px;
     height: 500px;
