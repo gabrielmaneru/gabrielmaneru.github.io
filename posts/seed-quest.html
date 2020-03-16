@@ -55,60 +55,60 @@
     </header>
     <article class="main-article">
         <header class="main-title">
-            <h1>Project Senko</h1>
+            <h1>Seed Quest</h1>
         </header>
         <p class="main-par">
-            <b>High Concept:</b> Project Senko is a third peron Hack & Slash game where the player will have to use his mobility, abilities and the environement to defeat hordes of enemies.
+            <b>High Concept:</b> Seed quest is a 3D dungeon crawler where the main character, a plant pot, is going to defeat enemies while trying to recover the power of the magical seeds.
         </p>
         <iframe width="880" height="495"
-                src="https://www.youtube.com/embed/JJ-Go2Vcb4o?controls=1"
+                src="https://www.youtube.com/embed/aSSAUqdGUII?controls=1"
                 allowfullscreen="allowfullscreen"
                 mozallowfullscreen="mozallowfullscreen"
                 msallowfullscreen="msallowfullscreen"
                 oallowfullscreen="oallowfullscreen"
                 webkitallowfullscreen="webkitallowfullscreen"></iframe>
         <p class="main-par">
-            <b>Instructor:</b> Dani Andia
+            <b>Instructor:</b> Iker Silvano
         </p>
         <p class="main-par">
-            <b>Engine:</b> Unreal Engine 4.22
+            <b>Engine:</b> Custom C++ engine from scratch
         </p>
         <p class="main-par">
-            <b>Language:</b> C++, UE4 Blueprint
+            <b>Language:</b> C++, Custom Blueprint
         </p>
         <p class="main-par">
             <b>Overview:</b>
-            Project Senko is the game project in which I am currently working on during my Senior year at Digipen. This is the first time we deliver a whole-year game project using a commercial engine. Also is the very first time we use Unreal Engine 4. The team was composed of 5 programmers and 6 artists.
+            Seed Quest is the first 3D game project and 3D engine I worked on during my junior year at Digipen. This was the moment to put in common all the knowledge we gathered to engineer a powerful 3D engine and make a game out of it. We were 13 programmers which resulted in a very challenging coordination and motivation. The game project was ultimately abandoned after the semester, however, the technologies we managed to built were amazing.
         </p>
-
         <hr class="separator" />
-
         <p class="main-par">
-            <h1>Role: AI Programmer</h1>
+            <h1>Role: Physics Programmer</h1>
         </p>
         <p class="main-par">
-            <b>Ticket Triaging System</b>
+            <b>3D Rigid Body Simulation</b>
         </p>
         <p class="main-par">
-            I designed a system for managing and directing the enemies on the battlefield. It was based on a ticket triaging paradigm where agents order themselves into queues depending on certain properties. Then when an agent is requested, a ticket is given to the one in the front of the more suitable queue and he takes action. His opportunity is then limited by some factors such as the viability to perform its duty, the time it will take or a simple stamina limit. After his duty is ended, the ticket is rerolled into the triaging system so that another entity is called to action.
+            I programmed a physics system allowing for primitive collision detection and resolution. I implemented a simple rigid body behavior using Euler integration. To create more complex shapes, I allowed for hierarchical primitives as well as a bounding volume hierarchy for speeding up the broad phase.
+        </p>
+        <hr class="separator" />
+        <p class="main-par">
+            <h1>Role: Tools Programmer</h1>
         </p>
         <p class="main-par">
-            <b>Agent Distribution for Wait Behaviour</b>
+            <b>Dungeon Generator</b>
         </p>
         <p class="main-par">
-            To add more dynamism to the enemies that are waiting, I implemented a distribution system. When the agents are too close or too far to the player, or as a random bias, I force it to reposition itself. To compute the new position I take into consideration the position of other enemies to spread in a circle enclosing the player. The distribution considers the distances between the enemies to avoid stepping agents over other agents.
-        </p>
-
-        <hr class="separator"/>
-
-        <p class="main-par">
-            <h1>Role: Gameplay Programmer</h1>
+            In the middle of the production, we needed to refactor the game & level design. We previously used large continuous levels that were difficult to create and maintain. Also, any iteration of these levels resulted in several conflicts while merging.
+            My objective was to create a level pipeline that would allow us to create & iterate fast the levels and rebuild them with deterministic designs. We moved from the open world to closed rectangular rooms.
         </p>
         <p class="main-par">
-            <b>Enemy Behaviours</b>
+            I created a tool that given a tile-map it designs the floor using choosing between floor models, colors and tile properties (such as water, mud or ice). Then I created the environment procedurally by placing props according to some room properties adding a high detail to the scenes. Finally, the resulting props were baked into a single mesh optimizing a lot of its performance. In the end, this tool resulted essential for the game and helped us move from two basic levels into four of them, each having 10-20 connected rooms.
         </p>
         <p class="main-par">
-            I was in charge of implementing some enemy behaviors while designing the AI system. I first implemented a general enemy that would serve as a base class where I implemented most of the locomotion as the wandering and waiting behaviors. Then, I specialized two types of enemies: the Melee which will charge at you and fight you; and the Ranged which will aim and shoot at you.
+            <b>Dungeon Editor</b>
+        </p>
+        <p class="main-par">
+            To support my previous work which was executed on my own. I needed to create a highly interactable UI that helps my teamwork use my tool and execute their designs. Ìt was divided into two-part, I implemented first a custom in-game tile editor that stored the level blueprints as sprites. Those were easy to merge and share; they also were the main input to the dungeon generator. Then, I implemented a biome UI for designing and coloring the environment.
         </p>
     </article>
     <footer class="footer-back">
