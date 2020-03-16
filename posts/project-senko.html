@@ -17,12 +17,10 @@
             <a class="site-title" href="">
                 Gabriel Ma&ntilde;eru
             </a>
-
             <!--Add Site Tagline-->
             <h2 class="site-tagline">
                 Video game programmer with special interest in Tools & Physics
             </h2>
-
             <!--Add Social Navigation-->
             <ul class="social-nav">
                 <li class="item">
@@ -36,7 +34,6 @@
                     </a>
                 </li>
             </ul>
-
             <!--Add Site Navigation-->
             <ul class="site-nav">
                 <li class="item">
@@ -53,27 +50,23 @@
                 </li>
             </ul>
         </div>
-
         <!--Insert Horizontal Separation-->
         <div style="background:#000; width:100%; height:20px;"></div>
     </header>
-
     <article class="main-article">
         <header class="main-title">
             <h1>Project Senko</h1>
         </header>
-        <hr class="separator">
-
-        <iframe width="880" height="495"
-                src="https://www.youtube.com/embed/JJ-Go2Vcb4o?controls=1"
-                allowfullscreen="allowfullscreen"
-                mozallowfullscreen="mozallowfullscreen" 
-                msallowfullscreen="msallowfullscreen" 
-                oallowfullscreen="oallowfullscreen" 
-                webkitallowfullscreen="webkitallowfullscreen"></iframe>
         <p class="main-par">
             <b>High Concept:</b> Project Senko is a third peron Hack & Slash game where the player will have to use his mobility, abilities and the environement to defeat hordes of enemies.
         </p>
+        <iframe width="880" height="495"
+                src="https://www.youtube.com/embed/JJ-Go2Vcb4o?controls=1"
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"></iframe>
         <p class="main-par">
             <b>Instructor:</b> Dani Andia
         </p>
@@ -83,17 +76,41 @@
         <p class="main-par">
             <b>Language:</b> C++, UE4 Blueprint
         </p>
-
-        <hr class="separator" />
-
         <p class="main-par">
             <b>Overview:</b>
+            Project Senko is the game project in which I am currently working on during my Senior year at Digipen. This is the first time we deliver a whole-year game project using a commercial engine. Also is the very first time we use Unreal Engine 4. The team was composed of 5 programmers and 6 artists.
         </p>
 
         <hr class="separator" />
 
-    </article>
+        <p class="main-par" style="">
+            <h1>Role: AI Programmer</h1>
+        </p>
+        <p class="main-par">
+            <b>Ticket Triaging System</b>
+        </p>
+        <p class="main-par">
+            I designed a system for managing and directing the enemies on the battlefield. It was based on a ticket triaging paradigm where agents order themselves into queues depending on certain properties. Then when an agent is requested, a ticket is given to the one in the front of the more suitable queue and he takes action. His opportunity is then limited by some factors such as the viability to perform its duty, the time it will take or a simple stamina limit. After his duty is ended, the ticket is rerolled into the triaging system so that another entity is called to action.
+        </p>
+        <p class="main-par">
+            <b>Agent Distribution for Wait Behaviour</b>
+        </p>
+        <p class="main-par">
+            To add more dynamism to the enemies that are waiting, I implemented a distribution system. When the agents are too close or too far to the player, or as a random bias, I force it to reposition itself. To compute the new position I take into consideration the position of other enemies to spread in a circle enclosing the player. The distribution considers the distances between the enemies to avoid stepping agents over other agents.
+        </p>
 
+        <hr class="separator" />
+
+        <p class="main-par" style="">
+            <h1>Role: Gameplay Programmer</h1>
+        </p>
+        <p class="main-par">
+            <b>Enemy Behaviours</b>
+        </p>
+        <p class="main-par">
+            I was in charge of implementing some enemy behaviors while designing the AI system. I first implemented a general enemy that would serve as a base class where I implemented most of the locomotion as the wandering and waiting behaviors. Then, I specialized two types of enemies: the Melee which will charge at you and fight you; and the Ranged which will aim and shoot at you.
+        </p>
+    </article>
     <footer class="footer-back">
         <h1>Work in progress | Made in HTML/CSS by Gabriel Mañeru | Hosted at github.io</h1>
     </footer>
