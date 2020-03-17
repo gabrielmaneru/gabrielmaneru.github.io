@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gabriel Ma&ntilde;eru - Portfolio</title>
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header start-->
+    <header class="banner">
+        <div class="banner-inner">
+            <!--Add Site Title-->
+            <a class="site-title" href="">
+                Gabriel Ma&ntilde;eru
+            </a>
+            <!--Add Site Tagline-->
+            <h2 class="site-tagline">
+                Video game programmer with special interest in Tools & Physics
+            </h2>
+            <!--Add Social Navigation-->
+            <ul class="social-nav">
+                <li class="item">
+                    <a class="icon-button" href="https://www.linkedin.com/in/gabriel-maneru-olazabal/" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="icon-button" href="https://github.com/gabrielmaneru/" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--Add Site Navigation-->
+            <ul class="site-nav">
+                <li class="item">
+                    <a class="site-page" href="../index.html">HOME</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/games.html">GAMES</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/projects.html">PROJECTS</a>
+                </li>
+                <li class="item">
+                    <a class="site-page" href="../pages/about.html">ABOUT</a>
+                </li>
+            </ul>
+        </div>
+        <!--Insert Horizontal Separation-->
+        <div style="background:#000; width:100%; height:20px;"></div>
+    </header>
+    <article class="main-article">
+        <header class="main-title">
+            <h1>Poppy's Nightmare</h1>
+        </header>
+        <p class="main-par">
+            <b>High Concept:</b> When a young girl named Poppy goes to sleep, she’s transported into the fantasy realm of her dreams… and nightmares. In this 2D, side-scrolling shoot-em-up, control Poppy as she blasts away the baddies in her subconscious mind, collecting sweet treats and power ups along the way!
+        </p>
+        <iframe src="https://www.youtube.com/embed/qJPf8vkeFZA?controls=1"
+                width="880"
+                height="495"
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"></iframe>
+        <iframe src="https://store.steampowered.com/widget/1132830/"
+                frameborder="0"
+                width="880"
+                height="258"></iframe>
+        <p class="main-par">
+            <b>Instructor:</b> Thomas Komair
+        </p>
+        <p class="main-par">
+            <b>Engine:</b> Custom C++ engine
+        </p>
+        <p class="main-par">
+            <b>Language:</b> C++
+        </p>
+        <p class="main-par">
+            <b>Release:</b> <a class="main-link" href="https://www.digipen.es/showcase/student-games/poppys-nightmare" target="_blank">DigiPen Showcase</a>
+        </p>
+        <p class="main-par">
+            <b>Publish:</b> <a class="main-link" href="https://store.steampowered.com/app/1132830/" target="_blank">Steam</a>
+        </p>
+        <p class="main-par">
+            <b>Overview:</b>
+            Poppy's Nightmare is the first 2D game project lasting for a whole year and where I worked on alongside artists during my sophomore year at Digipen. We had just worked on small team projects with short-term production plans, we now had to learn about planning, organizing and having real plausible expectations. Also we were not anymore working with only programmers, but also dealing with artists and people which don't know engine capabilities. The team was composed of 5 programmers and 6 artists. The game was published at Steam and chosen for representing DigiPen at Pax2019.
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <h1>Role: Engine Programmer</h1>
+        </p>
+        <p class="main-par">
+            <b>2D Rigid Body Simulation</b>
+        </p>
+        <p class="main-par">
+            I programmed a physics system allowing for primitive collision detection and resolution. I implemented a simple rigid body behavior using Euler integration and an event system for communicating collision events.
+        </p>
+        <p class="main-par">
+            <b>Background Pipeline</b>
+        </p>
+        <p class="main-par">
+            I implemented a parallax backgound system. As this was one of the core modules of the engine, I had to iterate it several times adding sub-systems such as the spawn system for the scrolling enemies and a resource manager for handling the different scrolling background layers.
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <h1>Role: Tools Programmer</h1>
+        </p>
+        <p class="main-par">
+            <b>Scroll Editing Tool</b>
+        </p>
+        <p class="main-par">
+            In order to place and adjust correctly and efficiently the background parallax for each of the levels, I designed a tool for building those layers. This help us a lot fixing bugs and artifacts from the background itself. Besides, this also served as a tool for going forward and background in the level while editing. Thus, this was use a lot for placing enemies or repeating enemy waves which speed up a lot the iteration process of the gameplay.
+        </p>
+
+        <hr class="separator" />
+
+        <p class="main-par">
+            <h1>Role: Gameplay Programmer</h1>
+        </p>
+        <p class="main-par">
+            <b>Boss States Machines</b>
+        </p>
+        <p class="main-par">
+            For creating more complexe enemies I created a state-based machine which was then use for engeneering all the bosses and mini-bosses of the game. After implementing it, I used it for creating The Mangy Dogs boss and the Bird, Owl and Troll mini-bosses.
+        </p>
+    </article>
+    <footer class="footer-back">
+        <h1>Work in progress | Made in HTML/CSS by Gabriel Mañeru | Hosted at github.io</h1>
+    </footer>
+</body>
+</html>
